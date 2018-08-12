@@ -1,4 +1,20 @@
-﻿def task_243_b(num):
+﻿def task_178_e(numbers):
+	'''
+	Function returns lenth of list of numbers a[k],
+	in list a[1],......,a[n] where 2^k < a[k] < k!.
+	'''
+	from math import factorial
+	k = 0
+	list_a = []
+	for a in numbers:
+		k += 1
+		if a > 2**k	and a<factorial(k):
+			list_a.append(a)
+	return len(list_a)
+
+
+
+def task_243_b(num):
 	'''
 	Function finds all pairs of x, y for which x^2 + y^2 = num
 	and x>=y.
