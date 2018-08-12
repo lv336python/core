@@ -5,7 +5,7 @@
 	Return will be a list of tuples with pair x, y
 	'''
 	from math import sqrt 
-	max_n = int(sqrt(num)) # will limit range and reduce check time
+	max_n = int(sqrt(num))+1 # will limit range and reduce check time
 	pairs = []
 	for x in range(1,max_n):
 		for y in range(1,max_n):
