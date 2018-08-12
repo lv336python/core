@@ -25,6 +25,7 @@ def task_559(n):
         raise TypeError(f"must be int, not {type(n).__name__}")
     elif n < 1:
         raise ValueError("must be a natural number (bigger than 0)")
+
     max_p = int(math.log2(n))
     marsenne_nums = []
     for p in range(1, max_p):
