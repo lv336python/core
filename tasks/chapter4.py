@@ -3,6 +3,17 @@ This module is for task from chapter 4
 """
 
 
+def task_87(num, num_of_digits):
+    """
+    Accepts two natural numbers n and m
+    Returns sum of the last m digits of number n
+    :param num: 7242
+    :param num_of_digits: 2
+    :return: 8
+    """
+    return sum([int(digit) for digit in str(num)[-num_of_digits::]])
+
+
 def task_86_b(number):
     '''
     Accepts natural number.
@@ -36,7 +47,6 @@ def task_88_h(number):
     if not number.isdigit():
         return 'Enter a valid number'
     return int('1' + number + '1')
-
 
 
 def task_86g(num, sign=1):
