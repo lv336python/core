@@ -130,5 +130,3 @@ def task_107(num):
     if 4**kpow == num:
         return kpow-1
     return kpow
-'''Tasks for chapter 4'''
-

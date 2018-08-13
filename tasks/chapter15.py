@@ -100,7 +100,6 @@ def task_559(num):
         if is_even(p_val):
             marsenne_nums.append(2**p_val-1)
     return marsenne_nums
-'''Task for chapter 15'''
 
 
 def task_562():
@@ -114,4 +113,3 @@ def task_562():
         if num == sum([int(d)**len(l_num) for d in l_num]): # checking number to be narcissistic
             ppdi.append(num)
     return ppdi
-

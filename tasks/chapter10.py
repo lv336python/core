@@ -114,4 +114,3 @@ def task_323(num):
         if bnum+anum == 1:
             msp_list.append(buf)
     return msp_list
-

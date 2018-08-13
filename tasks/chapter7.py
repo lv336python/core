@@ -151,7 +151,6 @@ def task_224(num):
     """
     count = len([x for x in range(1, num + 1) if num % x == 0])
     return count
-"""Tasks for chapter 7"""
 
 
 def task_243_b(num):
@@ -168,4 +167,3 @@ def task_243_b(num):
                 pair = (x_n, y_n)
                 pairs.append(pair)
     return pairs
-
