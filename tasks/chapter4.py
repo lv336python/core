@@ -1,6 +1,7 @@
 """
-Tasks 86.b and 108
+This module is for task from chapter 4
 """
+
 
 def task_86_b(number):
     '''
@@ -27,3 +28,11 @@ def task_108(number):
         else:
             power += 1
     return 2 ** power
+
+
+def task_88_h(number):
+    """ Return int"""
+    number = str(number)
+    if not number.isdigit():
+        return 'Enter a valid number'
+    return int('1' + number + '1')
