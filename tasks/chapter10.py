@@ -58,3 +58,4 @@ def task_340(number, *args):
     return  'Not found any ' \
             'match accordint to the patter ' \
             'args[i] + args[j] + args[k] == {}'.format(number)
+
