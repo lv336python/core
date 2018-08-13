@@ -130,3 +130,9 @@ def task_107(num):
     if 4**kpow == num:
         return kpow-1
     return kpow
+
+
+def task_88_a(n_value):
+    """Check if number contain digit '3'"""
+    num = list(str(n_value**2))
+    return '3' in num
