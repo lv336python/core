@@ -2,7 +2,6 @@
     Module with chapter 15 tasks
 """
 
-
 import math
 
 
