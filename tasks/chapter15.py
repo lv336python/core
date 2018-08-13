@@ -1,26 +1,19 @@
-def task_560(n, m):
-    """
+"""
     Accepts natural numbers
     Returns pairs of amicable numbers
-    :param n: 200
-    :param m: 300
-    :return: (220, 284)
-    """
-    tup1 = (0, 0)
-    for i in range(n, m):
-        proper_div1 = sum_divs(i)
-        if n <= proper_div1 <= m:
-            proper_div2 = sum_divs(proper_div1)
-            if proper_div2 == i:
-                tup1 = (proper_div2, proper_div1)
-                return tup1
-    return tup1
+    :param n_values: 200
+    :param m_values: 300
+    :return: [(257, 263), (257, 269), (257, 271), (257, 277), (257, 281), ...
+"""
 
 
-def sum_divs(num):
-    sum1 = 0
-    for i in range(num):
-        if i > 0:
-            if num % i == 0:
-                sum1 = sum1 + i
-    return sum1
+def task_560(n_v, m_v):
+    """Returns pairs of amicable numbers"""
+    result = []
+    d_n = {num: [x for x in range(1, int(num / 2) + 1) if num % x == 0] for num in range(n_v, m_v)}
+    for i in d_n.keys():
+        for j in d_n.keys():
+            if sum(d_n[i]) == sum(d_n[j]) and i != j:
+                result.append((i, j))
+    return result
+
