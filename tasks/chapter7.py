@@ -1,4 +1,4 @@
-﻿"""
+"""
 Task 225
 """
 def task_225(number):
