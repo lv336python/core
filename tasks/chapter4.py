@@ -3,6 +3,9 @@ This module is for task from chapter 4
 """
 
 
+import math
+
+
 def task_87(num, num_of_digits):
     """
     Accepts two natural numbers n and m
@@ -49,6 +52,7 @@ def task_88_h(number):
     return int('1' + number + '1')
 
 
+
 def task_86g(num, sign=1):
     """
     Given n(number).
@@ -90,3 +94,27 @@ def task_86g_1(num):
     else:
         return 'You need to enter THE integer'
     return the_sum
+
+
+def task_86a(num):
+    """
+    Accept one natural number
+    Return amount of digits in number
+    :param num: 444
+    :return: 4
+    """
+    count = len(str(num))
+    return count
+
+def task_107(num):
+    """
+    Accept integer number m > 1
+    Return the largest integer number kpow at which 4 in power kpow < num
+    :param num: 4
+    :return: 1
+    """
+    kpow = int(math.log(num, 4))
+
+    if 4**kpow == num:
+        return kpow-1
+    return kpow

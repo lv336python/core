@@ -35,6 +35,7 @@ def task_241(power, number):
     return res
 
 
+
 def task_184(prn, qrn, *args):
     """
     Given numbers p, q and sequence a1, ...., a 67
@@ -49,6 +50,7 @@ def task_184(prn, qrn, *args):
     else:
         raise TypeError
     return args
+
 
 
 def task_184_1(prn, qrn, *args):
@@ -72,6 +74,7 @@ def task_184_1(prn, qrn, *args):
     return args
 
 
+
 def task_242(num, the_sum=0):
     """
     Given n.
@@ -80,6 +83,7 @@ def task_242(num, the_sum=0):
     for k in range(num + 1):
         the_sum += ((math.pow(-1, k*((k-1)/2)))/math.factorial(num))
     return the_sum
+
 
 
 def task_242_1(num, the_sum=0):
@@ -121,3 +125,14 @@ def task_226(num_1, num_2):
     bigger = max(num_1, num_2)
     smaller = min(num_1, num_2)
     return [num for num in range(num_2 * num_1, bigger - 1, -bigger) if num % smaller == 0]
+
+
+def task_224(num):
+    """
+    Accept natural number num
+    Return all natural dividers of num
+    :param num: 25
+    :return: 3
+    """
+    count = len([x for x in range(1, num + 1) if num % x == 0])
+    return count
