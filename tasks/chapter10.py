@@ -1,22 +1,27 @@
-def task_323(n):
+"""
+Дано натуральное число n. Получить все натуральные
+числа, меньшие n и взаимно простые с ним.
+"""
+
+
+def task_323(num):
     """
-    Accept natural number n
-    Return mutually simple numbers with n and lower then n
-    :param n: 20
+    Accept natural number num
+    Return mutually simple numbers with num and lower then num
+    :param num: 20
     :return: [1, 3, 7, 9, 11, 13, 17, 19]
     """
-
     msp_list = []
-    for a in range(1, n):
-        buf = a
-        b = n
+    for anum in range(1, num):
+        buf = anum
+        bnum = num
 
-        while b != 0 and a != 0:
-            if b > a:
-                b = b % a
+        while bnum != 0 and anum != 0:
+            if bnum > anum:
+                bnum = bnum % anum
             else:
-                a = a % b
+                anum = anum % bnum
 
-        if b+a == 1:
+        if bnum+anum == 1:
             msp_list.append(buf)
     return msp_list
