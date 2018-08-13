@@ -15,5 +15,5 @@ def gen_expr():
 
 def task_568(val):
     """Return all possible variant for val"""
-    for res_string in filter(lambda x: x[0] == val, map(lambda x: (eval(x), x), gen_expr())):
+    for res_string in filter(lambda x: x[0] == val, map(lambda x: (eval(x), x), gen_expr())): # pylint: disable=eval-used
         print(res_string)
